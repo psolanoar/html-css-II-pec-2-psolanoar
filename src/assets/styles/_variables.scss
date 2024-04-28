@@ -1,0 +1,47 @@
+@use "sass:color";
+
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+$font-family-serif: "Georgia", "Times New Roman", serif;
+
+// Values
+$value-zero-vw: 0vw;
+$value-ten-vw: 10vw;
+$value-twenty-five-vw: 25vw;
+$value-hundred-vw: 100vw;
+
+$value-two-vh: 2vh;
+$value-ten-vh: 10vh;
+$value-hundred-vh: 100vh;
+
+$value-two-hundred-px: 200px;
+$value-eight-hundred-px: 800px;
+$value-zero-seventy-five: 0.75rem;
+$value-one-rem: 1rem;
+$value-one-half-rem: 1.5rem;
+$value-two-rem: 2rem;
+
+$value-two-percentage: 2%;
+
+// Variables
+$value-seven-hundred: 700;
+$value-flex: flex; 
+$value-column: column; 
+$value-center: center;
+$value-auto: auto;
+$value-block: block;
+$value-grid: grid;
+$value-bold: bold;
+$value-border-box: border-box;
+
+// Fonts sizes
+$font-size-title: 36px;
+$value-twenty-four: 24px;
+$font-size-logo: 18px;
+$font-size-text: 16px;
+
+// Responsive measures 
+$tablet-min-devices: 481px;
+$tablet-max-devices: 1024px;
+$desktop-min-devices: 1025px;

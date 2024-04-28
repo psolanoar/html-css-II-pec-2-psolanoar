@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  display: $value-flex;
+  flex-direction: $value-column;
+  height: $value-hundred-vh;
+  margin: $value-zero-vw;
+  padding: $value-zero-vw;
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-text;
+  line-height: $value-twenty-four;
+  background-color: $light;
+  color: $blue-400;
+}
+
+.header {
+  padding-top: $value-two-vh;
+  padding-right: $value-two-vh;
+}
+
+.main {
+  max-width: $value-eight-hundred-px;
+  margin: $value-auto;
+  padding: $value-two-rem;
+  border-radius: $value-two-rem;
+  text-align: $value-center;
+}
+
+.footer {
+  margin-top: $value-one-half-rem;
+  font-size: $value-zero-seventy-five;
+  text-align: $value-center;
+  padding: $value-ten-vh;
+  padding-bottom: $value-two-vh;
+  background-color: $light;
+}
+
+.logo {
+  font-size: $font-size-logo;
+  font-weight: $value-bold;
+}
+
+.background--blue {
+  background-color: $blue-100;
+}
