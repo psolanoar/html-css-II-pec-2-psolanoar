@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+  box-sizing: $value-border-box;
 }
 
 .body {
@@ -20,12 +20,9 @@
   padding-right: $value-two-vh;
 }
 
-.main {
+.main, .container {
   max-width: $value-eight-hundred-px;
   margin: $value-auto;
-  padding: $value-two-rem;
-  border-radius: $value-two-rem;
-  text-align: $value-center;
 }
 
 .footer {
@@ -38,10 +35,70 @@
 }
 
 .logo {
-  font-size: $font-size-logo;
+  font-size: $font-size-highlight;
   font-weight: $value-bold;
 }
 
+.text--highlight {
+  font-size:  $font-size-article-highlight;
+  line-height: $value-twenty-four;
+}
+
+
 .background--blue {
   background-color: $blue-100;
+}
+
+.title {
+  font-size: $font-size-title;
+  text-align: $value-center;
+  padding: $value-two-vh;
+  padding-top: $value-ten-vh;
+}
+
+.container--flex {
+  display: $value-flex;
+}
+
+.container--flex__column, .container--flex__text {
+  flex: $value-one;
+  margin: $value-ten-px;
+  text-align:  $value-center;
+}
+
+.container--flex__column {
+  background-color: $blue-100;
+}
+
+.container--flex__text  {
+  font-size: $font-size-text;
+  .container--flex__text--title {
+    font-size: $font-size-highlight;
+  }
+}
+
+.article--frame {
+  background-color: $blue-100;
+  text-align: $value-center;
+  padding: $value-ten-vh;
+  margin-bottom: $value-ten-vh;
+}
+
+/* media query styles adapted for tablets and desktops*/
+@media (min-width: $tablet-min-devices) {
+
+}
+
+/* media query for tablets */
+@media (min-width: $tablet-min-devices) and (max-width: $tablet-max-devices) {
+  .container--flex__column {
+    height: 150px;
+  }
+}
+
+/* media query for desktops */
+@media (min-width: $desktop-min-devices) {
+  .container--flex__column {
+    height: $value-two-hundred-px;
+  }
 }
