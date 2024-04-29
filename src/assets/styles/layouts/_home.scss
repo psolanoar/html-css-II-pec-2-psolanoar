@@ -12,7 +12,7 @@
   font-size: $font-size-text;
   line-height: $value-twenty-four;
   background-color: $light;
-  color: $blue-400;
+  color: $orange-800;
 }
 
 .header {
@@ -44,9 +44,13 @@
   line-height: $value-twenty-four;
 }
 
+.article {
+  padding-top: $value-two-vh;
+  padding-bottom: $value-two-vh;
+}
 
-.background--blue {
-  background-color: $blue-100;
+.background--orange {
+  background-color: $orange-300;
 }
 
 .title {
@@ -62,13 +66,9 @@
 
 .container--flex__column, .container--flex__text {
   flex: $value-one;
-  margin: $value-ten-px;
-  text-align:  $value-center;
+  text-align: $value-center;
 }
 
-.container--flex__column {
-  background-color: $blue-100;
-}
 
 .container--flex__text  {
   font-size: $font-size-text;
@@ -77,11 +77,17 @@
   }
 }
 
-.article--frame {
-  background-color: $blue-100;
-  text-align: $value-center;
-  padding: $value-ten-vh;
-  margin-bottom: $value-ten-vh;
+.participant--image {
+  width: $value-hundred-percentatge;
+  height: $value-hundred-percentatge;
+}
+
+.image--text {
+position: $value-absolute;
+top: $value-twenty-percentage;
+left: $value-fifty;
+transform: translate($value-minus-fifty, $value-minus-fifty);
+color: $light;
 }
 
 /* media query styles adapted for tablets and desktops*/
@@ -92,13 +98,13 @@
 /* media query for tablets */
 @media (min-width: $tablet-min-devices) and (max-width: $tablet-max-devices) {
   .container--flex__column {
-    height: 150px;
+    height: $value-twenty-percentage;
   }
 }
 
 /* media query for desktops */
 @media (min-width: $desktop-min-devices) {
   .container--flex__column {
-    height: $value-two-hundred-px;
+    height: $value-thirty-percentage;
   }
 }
