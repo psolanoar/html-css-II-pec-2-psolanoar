@@ -2,6 +2,12 @@
   box-sizing: $value-border-box;
 }
 
+.body--grid {
+  display: $value-grid;
+  grid-template-rows: $value-auto $value-one-fr $value-auto;
+  min-height: $value-hundred-vh;
+}
+
 .body {
   display: $value-flex;
   flex-direction: $value-column;
@@ -13,6 +19,21 @@
   line-height: $value-twenty-four;
   background-color: $light;
   color: $orange-800;
+}
+
+@supports ((display: $value-grid)) {
+  .main--grid {
+    display: $value-grid;
+    grid-template-rows: $value-one-fr $value-one-fr $value-one-fr;
+    grid-template-columns: $value-one-fr $value-one-fr $value-one-fr;
+    min-height: $value-hundred-vh;
+    place-items: $value-center;
+  }
+}
+
+.item {
+  text-align: $value-center;
+  color: $orange-600;
 }
 
 .header {
@@ -80,6 +101,11 @@
 .participant--image {
   width: $value-hundred-percentatge;
   height: $value-hundred-percentatge;
+}
+.image--rounded {
+  width: $value-hundred-percentatge;
+  min-height: $value-hundred-percentatge;
+  border-radius: $value-hundred-percentatge;
 }
 
 .image--text {
