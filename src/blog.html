@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -9,107 +9,88 @@
     <title>UOC Boilerplate</title>
   </head>
   <body class="body">
-    <header class="header">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <img src="./assets/images/logo-naranja.png" alt="Logo" width="180" height="50"></img>
-          </div>
-          <div class="col">
-            <ul class="nav justify-content-end">
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="./participants.html">Mejores chefs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="./blog.html">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="./about.html">Sobre nosotros</a>
-              </li>
-            </ul>
-          </div>
+    <div class="body--flex">
+      <include src="./views/header.html"></include> <!-- import partial header -->
+      <div>
+        <img src="./assets/images/pexels-zun1412-1721073.jpg" alt="pexels-zun1412-1721073.jpg" class="body--flex__image"></img>
+        <div class="body--flex__image--text">
+          <h2>Domingo 30 de junio de 2024</h2>
+          <h1>Castelldefels Cake Fest</h1>
+          <footer>1a Edición</footer>
         </div>
       </div>
-    </header>
-
-    <div class="container--flex__column">
-      <img src="./assets/images/pexels-zun1412-1721073.jpg" alt="pexels-tim-douglas-6210852" class="participant--image"</img>
-      <div class="image--text">
-        <h2>Domingo 30 de junio de 2024</h2>
-        <h1>Castelldefels Cake Fest</h1>
-        <footer>1a Edición</footer>
+      <div class="body--flex__main">
+        <div class="container">
+          <article class="row">
+            <div class="col">
+              <h1 class="body--flex__main--text--highlight">
+                Pasteles, talleres de cocina, concursos y música en directo ¡no te lo puedes perder!
+              </h1>
+            </div>
+            <div class="col">
+              <p>
+                La 1a Edición de Cake Fest llega a Castelldefels para dar a conocer los negocios dedicados a la pasteleria que se encuentran en el pueblo.
+                Tambén se pretende resaltar la importancia que tienen los granjeros en el cultivo de vegetales y frutas, además se incorporarán diferentes 
+                actividades para promover la importancia del consumo de vegetales especialmente entre los más pequeños.
+              </p>
+            </div>
+          </article>
+          <ol>
+            <li>10.00h</li>
+            <li>
+              Inicio del festival. 
+            </li>
+            <li>10.30h - 11h</li>
+            <li>
+              Bienvenida y actuación en directo del grupo local "Far Blues".
+            </li>
+            <li>10.45h - 11.15h</li>
+            <li>
+              Actividad para los más pequeños: Lectura del cuento "La misión de las verduras".
+            </li>
+            <li>11h</li>
+            <li>
+              Descuento en la degustación de los pasteles Carrot Cakes de los establecimientos participantes.
+            </li>
+            <li>11.30h - 12h</li>
+            <li>
+              Actividad para los más pequeños: Haz tu vegetal con plastelina.
+            </li>
+            <li>11.45h</li>
+            <li>
+              Fin de las votaciones.
+            </li>
+            <li>12.00h</li>
+            <li>
+              Comunicación del local ganador de Castelldefels Cake Fest.
+            </li>
+          </ol>
+          <article class="row">
+            <div class="col">
+              <h1 class="body--flex__main--text--highlight">
+                Los participantes de Castelldefels Cake Fest optarán por el reconocimiento local al mejor
+                Carrot Cake de Castelldefels.
+              </h1>
+              <p>
+                El acceso es gratuito, todas las porciones de los pasteles estarán a 3€, exceptuando lal hora de descuento 
+                donde se aplicara un 50% de descuento y costarán 1,50€. 
+              </p>
+            </div>
+            </article>
+            <article class="row">
+              <p>
+                El evento se realizará el domingo 30 de junio de 2024 en la Plaça del castell, 1, 08860 Castelldefels, Barcelona.
+                Puedes llegar al evento con los autobuses X95 y L96. Si vienes en coche no te preocupes, Ttmbién habrá una zona habilitada para el aparcamiento.
+              </p>  
+              <p>
+                ¡Ven al festival y vota por tu favorito!
+              </p>  
+            </article>
+          </div>
+          <img src="./assets/images/pexels-katerina-holmes-5908016.jpg" alt="pexels-katerina-holmes-5908016.jpg" class="body--flex__image"></img>
       </div>
+      <include src="./views/footer.html"></include> <!-- import partial footer -->
+      <script type="module" src="./assets/scripts/main.js"></script>
     </div>
-    <div class="main">
-      <div class="container">
-        <article class="row article">
-          <div class="col">
-            <h1 class="text--highlight">
-              Pasteles, talleres de cocina, concursos y música en directo ¡no te lo puedes perder!
-            </h1>
-          </div>
-          <div class="col">
-            <p>
-              La 1a Edición de Cake Fest llega a Castelldefels para dar a conocer los negocios dedicados a la pasteleria que se encuentran en el pueblo.
-              Tambén se pretende resaltar la importancia que tienen los granjeros en el cultivo de vegetales y frutas, además se incorporarán diferentes 
-              actividades para promover la importancia del consumo de vegetales especialmente entre los más pequeños.
-            </p>
-          </div>
-        </article>
-
-        <ol>
-          <li>10.00h</li>
-          <p>
-            Inicio del festival. 
-          </p>
-          <li>10.30h - 11h</li>
-          <p>
-            Bienvenida y actuación en directo del grupo local "Far Blues".
-          </p>
-          <li>10.45h - 11.15h</li>
-          <p>
-            Actividad para los más pequeños: Lectura del cuento "La misión de las verduras".
-          </p>
-          <li>11h</li>
-          <p>
-            Descuento en la degustación de los pasteles Carrot Cakes de los establecimientos participantes.
-          </p>
-          <li>11.30h - 12h</li>
-          <p>
-            Actividad para los más pequeños: Haz tu vegetal con plastelina.
-          </p>
-          <li>11.45h</li>
-          <p>
-            Fin de las votaciones.
-          </p>
-          <li>12.00h</li>
-          <p>
-            Comunicación del local ganador de Castelldefels Cake Fest.
-          </p>
-         </ol>
-
-        <article class="row article">
-          <div class="col">
-            <h1 class="text--highlight">
-              Los participantes de Castelldefels Cake Fest optarán por el reconocimiento local al mejor
-              Carrot Cake de Castelldefels.
-            </h1>
-            <p>
-              El acceso es gratuito, todas las porciones de los pasteles estarán a 3€, exceptuando lal hora de descuento 
-              donde se aplicara un 50% de descuento y costarán 1,50€. 
-            </p>
-          </article>
-          <article class="row article">
-            <p>
-              El evento se realizará el domingo 30 de junio de 2024 en la Plaça del castell, 1, 08860 Castelldefels, Barcelona.
-              Puedes llegar al evento con los autobuses X95 y L96. Si vienes en coche no te preocupes, Ttmbién habrá una zona habilitada para el aparcamiento.
-              ¡Ven al festival y vota por tu favorito!
-            </p>  
-          </article>
-        </div>
-        <img src="./assets/images/pexels-katerina-holmes-5908016.jpg" alt="pexels-katerina-holmes-5908016"  width="600" height="300"</img>
-    </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script>
   </body>
 </html>

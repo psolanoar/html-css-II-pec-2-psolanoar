@@ -1,136 +1,157 @@
 * {
   box-sizing: $value-border-box;
-}
-
-.body--grid {
-  display: $value-grid;
-  grid-template-rows: $value-auto $value-one-fr $value-auto;
-  min-height: $value-hundred-vh;
+  font-family: $font-family-sans-serif;
 }
 
 .body {
-  display: $value-flex;
-  flex-direction: $value-column;
-  height: $value-hundred-vh;
-  margin: $value-zero-vw;
-  padding: $value-zero-vw;
+  height: $value-hundred-dv;
+  margin: $value-zero-dv;
+  padding: $value-zero-dv;
   font-family: $font-family-sans-serif;
   font-size: $font-size-text;
   line-height: $value-twenty-four;
   background-color: $light;
   color: $orange-800;
-}
 
-@supports ((display: $value-grid)) {
-  .main--grid {
+  .body__header {
+    padding-top: $value-two-dv;
+    padding-right: $value-two-dv;
+  }
+
+  .body__footer {
+    margin-top: $value-one-half-lv;
+    font-size: $value-zero-seventy-five-lv;
+    text-align: $value-center;
+    padding: $value-ten-vh;
+    padding-bottom: $value-one-sv;
+    background-color: $light;
+  }
+
+  .body--title {
+    font-size: $font-size-title;
+    text-align: $value-center;
+    padding: $value-two-dv;
+    padding-top: $value-ten-dv;
+  }
+
+  .body--flex__main--text--highlight {
+    font-size:  $font-size-article-highlight;
+    line-height: $value-twenty-four;
+  }
+
+  .body--grid {
     display: $value-grid;
-    grid-template-rows: $value-one-fr $value-one-fr $value-one-fr;
-    grid-template-columns: $value-one-fr $value-one-fr $value-one-fr;
-    min-height: $value-hundred-vh;
-    place-items: $value-center;
+    grid-template-rows: $value-auto $value-one-fr $value-auto;
+    min-height: $value-hundred-dv;
+    background-color: mix($red-300, $orange-200, $value-twenty-percentage);
+
+    .body__main--grid {
+      display: $value-block;
+      white-space: $value-normal;
+      padding: $value-twenty-percentage;
+    }
+
+    @supports ((display: $value-grid)) {
+      .body__main--grid {
+        display: $value-grid;
+        grid-template-rows: repeat($value-three, $value-one-fr);
+        grid-template-columns: repeat($value-three,  $value-one-fr);
+        min-height: $value-hundred-dv;
+        place-items: $value-center;
+        padding: $value-five-percentage;
+      }
+    }
+
+    .body__main--grid__item__image--rounded {
+      width: $value-hundred-percentatge;
+      min-height: $value-hundred-percentatge;
+      border-radius: $value-hundred-percentatge;
+    }
+
+    .body__main--grid__item {
+      text-align: $value-center;
+      color: $orange-600;
+    }
+  }
+  
+  .body--flex {
+    display: $value-flex;
+    flex-direction: $value-column;
+
+    .body--flex__image {
+      width: $value-hundred-percentatge;
+      height: $value-three-hundred-px;
+    }   
+
+    .body--flex__image--text {
+      position: $value-absolute;
+      top: $value-twenty-percentage;
+      left: $value-fifty;
+      transform: translate($value-minus-fifty, $value-minus-fifty);
+      color: $light;
+    }
+
+    .body--flex__main {
+      max-width: $value-eight-hundred-px;
+      margin: $value-auto;
+
+      .body--flex__main__button--color {
+        background-color: $orange-300;
+        padding-left: $value-two-percentage;
+        padding-right: $value-two-percentage;
+        color: $light;
+        border: $value-none;
+      }
+
+      .body--flex__main__container {
+        display: $value-flex;
+      
+        .body--flex__main__container__column {
+          flex: $value-one;
+          text-align: $value-center;
+
+          .body--flex__main__container__column__image {
+            width: $value-hundred-percentatge;
+            height: $value-hundred-percentatge;
+          }       
+      
+          .body--flex__main__container--title {
+            font-size: $font-size-highlight;
+          }
+        }  
+      }
+    }
   }
 }
 
-.item {
-  text-align: $value-center;
-  color: $orange-600;
+:where(div > ol) {
+  background-color: $orange-100;
 }
 
-.header {
-  padding-top: $value-two-vh;
-  padding-right: $value-two-vh;
-}
-
-.main, .container {
-  max-width: $value-eight-hundred-px;
-  margin: $value-auto;
-}
-
-.footer {
-  margin-top: $value-one-half-rem;
-  font-size: $value-zero-seventy-five;
-  text-align: $value-center;
-  padding: $value-ten-vh;
-  padding-bottom: $value-two-vh;
-  background-color: $light;
-}
-
-.logo {
-  font-size: $font-size-highlight;
+:is(ol > li) {
   font-weight: $value-bold;
 }
 
-.text--highlight {
-  font-size:  $font-size-article-highlight;
-  line-height: $value-twenty-four;
-}
-
-.article {
-  padding-top: $value-two-vh;
-  padding-bottom: $value-two-vh;
-}
-
-.background--orange {
-  background-color: $orange-300;
-}
-
-.title {
-  font-size: $font-size-title;
-  text-align: $value-center;
-  padding: $value-two-vh;
-  padding-top: $value-ten-vh;
-}
-
-.container--flex {
-  display: $value-flex;
-}
-
-.container--flex__column, .container--flex__text {
-  flex: $value-one;
-  text-align: $value-center;
-}
-
-
-.container--flex__text  {
-  font-size: $font-size-text;
-  .container--flex__text--title {
-    font-size: $font-size-highlight;
-  }
-}
-
-.participant--image {
-  width: $value-hundred-percentatge;
-  height: $value-hundred-percentatge;
-}
-.image--rounded {
-  width: $value-hundred-percentatge;
-  min-height: $value-hundred-percentatge;
-  border-radius: $value-hundred-percentatge;
-}
-
-.image--text {
-position: $value-absolute;
-top: $value-twenty-percentage;
-left: $value-fifty;
-transform: translate($value-minus-fifty, $value-minus-fifty);
-color: $light;
+article:has(h1) {
+  padding-top: $value-five-percentage;
+  padding-bottom: $value-five-percentage;
 }
 
 /* media query styles adapted for tablets and desktops*/
 @media (min-width: $tablet-min-devices) {
-
 }
 
 /* media query for tablets */
 @media (min-width: $tablet-min-devices) and (max-width: $tablet-max-devices) {
-  .container--flex__column {
+  .body--flex__main__container__column {
     height: $value-twenty-percentage;
   }
 }
 
 /* media query for desktops */
 @media (min-width: $desktop-min-devices) {
-  .container--flex__column {
+  .body--flex__main__container__column {
     height: $value-thirty-percentage;
   }
+
 }

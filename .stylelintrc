@@ -2,8 +2,16 @@
  "extends": ["stylelint-config-recommended-scss"],
  "rules": {
    "selector-class-pattern": "^.[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$",
-   "unit-allowed-list": ["px", "rem", "%", "vw"],
+   "unit-allowed-list": ["px", "%", "vh", "dv", "lv", "sv", "fr"],
+   "color-no-invalid-hex": null,
+   "string-no-newline": true,
+   "no-duplicate-selectors": true,
+   "font-family-no-duplicate-names": true,
+   "block-no-empty": true,
+   "shorthand-property-no-redundant-values": true,
+   "comment-whitespace-inside": "always"
   }
 }
+
 
 

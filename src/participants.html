@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -9,96 +9,77 @@
     <title>UOC Boilerplate</title>
   </head>
   <body class="body">
-    <header class="header">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <img src="./assets/images/logo-naranja.png" alt="Logo" width="180" height="50"></img>
-          </div>
-          <div class="col">
-            <ul class="nav justify-content-end">
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="./participants.html">Mejores chefs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="./blog.html">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="./about.html">Sobre nosotros</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="container">
-      <h1 class="title">Mejores Chefs</h1>
-      <div class="container--flex">
-        <div class="container--flex__column">
-          <img src="./assets/images/pexels-anastasia-yudin-2240500-4657417.jpg" alt="pexels-anastasia-yudin-2240500-4657417" class="participant--image"></img>
-        </div>
-        <div class="container--flex__column">
-          <img src="./assets/images/pexels-ella-olsson-572949-3026803.jpg" alt="pexels-ella-olsson-572949-3026803" class="participant--image"></img>
-        </div>
-        <div class="container--flex__column">
-          <img src="./assets/images/pexels-eva-bronzini-5742605.jpg" alt="pexels-eva-bronzini-5742605" class="participant--image"></img>
-        </div>
-      </div>
-      <div class="container--flex">
-        <div class="container--flex__text">
-          <h2 class="container--flex__text--title">Sugar cakes</h2>
-          <p>
-            El local Sugar cakes es un referente para amantes de los postres tradicionales.
-          </p>
-        </div>
-        <div class="container--flex__text">
-          <h2 class="container--flex__text--title">Dolç racó</h2>
-          <p>
-            Un lugar con encanto y con muchas especialidades en dulces para ofrecer.
-          </p>
-        </div>
-        <div class="container--flex__text">
-          <h2 class="container--flex__text--title">Delirium</h2>
-          <p>
-            Su dueño Richard, es conocido en Castelldefels por sus participaciones con grandes chefs.
-          </p>
-        </div>
-      </div>
+    <div class="body--flex">
+      <include src="./views/header.html"></include> <!-- import partial header -->
+      <div class="body--flex__main">
 
-      <div class="container--flex">
-        <div class="container--flex__column">
-          <img src="./assets/images/pexels-leeloothefirst-5594503.jpg" alt="pexels-leeloothefirst-5594503" class="participant--image"></img>
+        <h1 class="body--title">Mejores Chefs</h1>
+        <div class="body--flex__main__container">
+          <div class="body--flex__main__container__column">
+            <img src="./assets/images/pexels-anastasia-yudin-2240500-4657417.jpg" alt="pexels-anastasia-yudin-2240500-4657417.jpg" class="body--flex__main__container__column__image"></img>
+          </div>
+          <div class="body--flex__main__container__column">
+            <img src="./assets/images/pexels-ella-olsson-572949-3026803.jpg" alt="pexels-ella-olsson-572949-3026803.jpg" class="body--flex__main__container__column__image"></img>
+          </div>
+          <div class="body--flex__main__container__column">
+            <img src="./assets/images/pexels-eva-bronzini-5742605.jpg" alt="pexels-eva-bronzini-5742605.jpg" class="body--flex__main__container__column__image"></img>
+          </div>
         </div>
-        <div class="container--flex__column">
-          <img src="./assets/images/pexels-nastyasensei-66707-2267873.jpg" alt="pexels-nastyasensei-66707-2267873" class="participant--image"></img>
+        <div class="body--flex__main__container">
+          <div>
+            <h2 class="body--flex__main__container--title">Sugar cakes</h2>
+            <p>
+              El local Sugar cakes es un referente para amantes de los postres tradicionales.
+            </p>
+          </div>
+          <div>
+            <h2 class="body--flex__main__container--title">Dolç racó</h2>
+            <p>
+              Un lugar con encanto y con muchas especialidades en dulces para ofrecer.
+            </p>
+          </div>
+          <div>
+            <h2 class="body--flex__main__container--title">Delirium</h2>
+            <p>
+              Su dueño Richard, es conocido en Castelldefels por sus participaciones con grandes chefs.
+            </p>
+          </div>
         </div>
-        <div class="container--flex__column">
-          <img src="./assets/images/pexels-tim-douglas-6210852.jpg" alt="pexels-tim-douglas-6210852" class="participant--image"</img>
+        <div class="body--flex__main__container">
+          <div class="body--flex__main__container__column">
+            <img src="./assets/images/pexels-leeloothefirst-5594503.jpg" alt="pexels-leeloothefirst-5594503.jpg" class="body--flex__main__container__column__image"></img>
+          </div>
+          <div class="body--flex__main__container__column">
+            <img src="./assets/images/pexels-nastyasensei-66707-2267873.jpg" alt="pexels-nastyasensei-66707-2267873.jpg" class="body--flex__main__container__column__image"></img>
+          </div>
+          <div class="body--flex__main__container__column">
+            <img src="./assets/images/pexels-tim-douglas-6210852.jpg" alt="pexels-tim-douglas-6210852.jpg" class="body--flex__main__container__column__image"></img>
+          </div>
+        </div>
+        <div class="body--flex__main__container">
+          <div>
+            <h2 class="body--flex__main__container--title">Colourfoul corner</h2>
+            <p>
+              Este colorido local lleva abierto un año y aportará toda sus ganas en su primer concurso.
+            </p>
+          </div>
+          <div>
+            <h2 class="body--flex__main__container--title">Marias's cakes</h2>
+            <p>
+              Maria dará a conocer su nueva creación el pastel de zanahoria con frutos secos en 
+              una masa bastante fina.
+            </p>
+          </div>
+          <div>
+            <h2 class="body--flex__main__container--title">Pateleria Carlos</h2>
+            <p>
+              Esta pequeña pero conocida pasteleria obtuvo el premio al mejor pastel de manzana em España en 2018.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="container--flex">
-        <div class="container--flex__text">
-          <h2 class="container--flex__text--title">Colourfoul corner</h2>
-          <p>
-            Este colorido local lleva abierto un año y aportará toda sus ganas en su primer concurso.
-          </p>
-        </div>
-        <div class="container--flex__text">
-          <h2 class="container--flex__text--title">Marias's cakes</h2>
-          <p>
-            Maria dará a conocer su nueva creación el pastel de zanahoria con frutos secos en 
-            una masa bastante fina.
-          </p>
-        </div>
-        <div class="container--flex__text">
-          <h2 class="container--flex__text--title">Pateleria Carlos</h2>
-          <p>
-            Esta pequeña pero conocida pasteleria obtuvo el premio al mejor pastel de manzana em España en 2018.
-          </p>
-        </div>
-      </div>
+      <include src="./views/footer.html"></include> <!-- import partial footer -->
+      <script type="module" src="./assets/scripts/main.js"></script>
     </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script>
   </body>
 </html>
