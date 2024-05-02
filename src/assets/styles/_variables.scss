@@ -5,47 +5,51 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Segoe UI Symbol";
 
 // Values
-$value-zero-dv: 0dv;
-$value-two-dv: 2dv;
-$value-ten-dv: 10dv;
-$value-hundred-dv: 100dv;
+$value-one-dvw: 1dvw;
 
-$value-one-sv: 1sv;
+$value-one-svh: 1svh;
+$value-twenty-svh: 20svh;
 
-$value-zero-seventy-five-lv: 0.75lv;
-$value-one-lv: 1lv;
-$value-one-half-lv: 1.5lv;
+$value-one-lvh: 1lvh;
+$value-ten-lvh: 10lvh;
 
 $value-ten-vh: 10vh;
 
 $value-ten-px: 10px;
 $value-tweenty-px: 20px;
 $value-one-hundred-fifty-px: 150px;
-$value-two-hundred-px: 200px;
+$value-two-hundred-px: 200px; 
 $value-three-hundred-px: 300px;
-$value-eight-hundred-px: 800px;
 
+$value-zero-percentage: 0%;
+$value-one-percentage: 1%;
 $value-two-percentage: 2%;
+$value-two-percentage: 3%;
 $value-five-percentage: 5%;
+$value-ten-percentage: 10%;
 $value-twenty-percentage: 20%;
 $value-thirty-percentage: 30%;
-$value-thirty-three: 33.33%;
 $value-forty-percentage: 40%;
-$value-minus-fifty: -50%;
-$value-fifty: 50%;
-$value-hundred-percentatge: 100%;
+$value-minus-fifty-percentage: -50%;
+$value-fifty-percentage: 50%;
+$value-sixty-percentage: 60%;
+$value-hundred-percentage: 100%;
 
 $value-one-fr: 1fr;
 $value-two-fr: 2fr;
 
+$value-zero: 0;
+$value-zero-sixty: 0.60;
 $value-one: 1;
 $value-three: 3;
+$value-thirty: 30;
 $value-seven-hundred: 700;
 
 // Variables
 $value-flex: flex; 
 $value-column: column; 
 $value-center: center;
+$value-justify: justify;
 $value-none: none;
 $value-absolute: absolute;
 $value-auto: auto;
@@ -56,15 +60,23 @@ $value-bold: bold;
 $value-wrap: wrap;
 $value-border-box: border-box;
 $value-space-between: space-between;
+$value-left: left; 
+$value-color-hwb:  hwb(30 87% 1%);
+$value-color-display-p3: color(display-p3 1 0.60 0);
 
 // Fonts sizes
-$font-size-title: 33px;
+$font-size-title: 36px;
+$font-size-subtitle: 26px;
 $value-twenty-four: 24px;
 $font-size-article-highlight: 24px;
 $font-size-highlight: 20px;
 $font-size-text: 18px;
 
+$font-size-title-adapted: 3vh;
+$font-size-subtitle-adapted: 2vh;
+$font-size-text-adapted: 1.5vh;
+
 // Responsive measures 
-$tablet-min-devices: 481px;
+$tablet-min-devices: 600px;
 $tablet-max-devices: 1024px;
 $desktop-min-devices: 1025px;

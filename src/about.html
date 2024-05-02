@@ -13,22 +13,130 @@
       <include src="./views/header.html"></include> <!-- import partial header -->
       <div class="body--flex__main">
         <h1 class="body--title">Contacto</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+          <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+          </symbol>
+          <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+          </symbol>
+          <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </symbol>
+        </svg>
         <p>
-          Si tienes alguna duda, te interesa saber si hay opciones veganas, vegetarianas o sin gluten.. O si bien, te interesa 
-          participar en el concurso con tu local ¡No dudes en contactarnos!
+          Si tienes alguna duda o te interesa participar en el concurso con tu local ¡No dudes en contactarnos!
         </p>
-  
-        <form class="mb-3" name="contact" method="POST" data-netlify="true">
-          <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" required>
-  
-          <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
-       
-          <button type="submit" class="body--flex__main__button--color">Enviar</button>
-  
+        <form name="contact" method="POST" data-netlify="true" class="body--flex__main__form">
+          <p>
+            <label for="email" class="body--flex__main__form--label">Correo electrónico</label>
+              <input type="text" id="email" name="email" class="body--flex__main__form--control"></input>
+          </p>
+          <p>
+            <label for="message" class="body--flex__main__form--label">Mensaje</label>
+            <textarea id="message" name="message" class="body--flex__main__form--control--message"></textarea>
+          </p>
+          <div class="alert alert-dark d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+            <div>
+              Dispondremos de productos veganos, vegetarianos y sin gluten.
+            </div>
+          </div>
+          <p>
+            <button type="submit" class="badge rounded-pill bg-secondary">Enviar</button>
+          </p>
         </form>
-  
+        <h1 class="body--title">Galeria de imágenes</h1>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/images/pexels-eva-bronzini-5742605.jpg" class="d-block w-100" alt="pexels-eva-bronzini-5742605.jpg">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/images/pexels-anastasia-yudin-2240500-4657417.jpg" class="d-block w-100" alt="pexels-anastasia-yudin-2240500-4657417.jpg">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/images/pexels-ella-olsson-572949-3026803.jpg" class="d-block w-100" alt="pexels-ella-olsson-572949-3026803.jpg">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="body--flex__main--padding">
+          <h2 class="body--subtitle">Enlaces</h2>
+          <blockquote>
+            <footer>
+              <cite>
+                <a href="https://www.pexels.com/es-es/foto/comida-ligero-exterior-afuera-6210852/"  class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Imagen 01</a>
+              </cite>
+            </footer> 
+          </blockquote>
+          <blockquote>
+            <footer>
+              <cite>
+                <a href="https://www.pexels.com/es-es/foto/pastel-de-zanahoria-2267873/" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Imagen 02</a>
+              </cite>
+            </footer>
+          </blockquote>
+          <blockquote>
+            <footer>
+              <cite>
+                <a href="https://www.pexels.com/es-es/foto/comida-postre-pastel-dulces-4657417/" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Imagen 03</a>
+              </cite>
+            </footer>
+          </blockquote>
+          <blockquote>
+            <footer>
+              <cite><a href="https://www.pexels.com/es-es/foto/zanahorias-naranjas-y-pan-blanco-sobre-plato-de-ceramica-blanca-5594503/" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Imagen 04</a>
+              </cite>
+            </footer>
+          </blockquote>
+          <blockquote>
+            <footer>
+              <cite><a href="https://www.pexels.com/es-es/foto/frijoles-marrones-y-negros-sobre-plato-de-ceramica-blanca-5742605/" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Imagen 05</a>
+              </cite>
+            </footer>
+          </blockquote>
+          <blockquote>
+            <footer>
+              <cite><a href="https://www.pexels.com/es-es/foto/foto-de-vista-superior-de-pastel-horneado-3026803/" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Imagen 06</a>
+              </cite>
+            </footer>
+          </blockquote>
+          <blockquote>
+            <footer>
+              <cite><a href="https://www.pexels.com/es-es/foto/zanahoria-naranja-1721073/" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Imagen 07</a></cite>
+            </footer>
+          </blockquote>
+          <blockquote>
+            <footer>
+              <cite><a href="https://www.pexels.com/es-es/foto/persona-sosteniendo-taza-de-ceramica-blanca-5908016/" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Imagen 08</a>
+              </cite>
+            </footer>
+          </blockquote>
+          <blockquote>
+            <footer>
+              <cite><a href="https://www.pexels.com/es-es/foto/taza-y-postre-de-ceramica-blanca-963755/" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Imagen 09</a></cite>
+            </footer>
+          </blockquote>
+          <blockquote>
+            <footer>
+              <cite><a href="https://www.pexels.com/es-es/foto/zanahoria-naranja-y-verduras-verdes-3999498/"  class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Imagen 10</a>
+              </cite>
+            </footer>
+          </blockquote>
+        </div>
       </div>
       <include src="./views/footer.html"></include>  <!-- import partial footer -->
       <script type="module" src="./assets/scripts/main.js"></script>
