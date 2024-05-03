@@ -24,9 +24,10 @@ $value-three-hundred-px: 300px;
 $value-zero-percentage: 0%;
 $value-one-percentage: 1%;
 $value-two-percentage: 2%;
-$value-two-percentage: 3%;
+$value-three-percentage: 3%;
 $value-five-percentage: 5%;
 $value-ten-percentage: 10%;
+$value-fifteen-percentage: 15%;
 $value-twenty-percentage: 20%;
 $value-thirty-percentage: 30%;
 $value-forty-percentage: 40%;
@@ -47,6 +48,7 @@ $value-seven-hundred: 700;
 
 // Variables
 $value-flex: flex; 
+$value-wrap: wrap; 
 $value-column: column; 
 $value-center: center;
 $value-justify: justify;
@@ -62,21 +64,28 @@ $value-border-box: border-box;
 $value-space-between: space-between;
 $value-left: left; 
 $value-color-hwb:  hwb(30 87% 1%);
-$value-color-display-p3: color(display-p3 1 0.60 0);
+$value-color-display-p3: color(display-p3 1 0.65 0);
+$value-color-hsl: hsl(39, 94%, 80%);
+
+$value-one-flex: 00 0 calc(100% - 20px);
+$value-two-flex: 00 0 calc(50% - 20px);
+$value-three-flex: 00 0 calc(33.33% - 20px);
 
 // Fonts sizes
-$font-size-title: 36px;
-$font-size-subtitle: 26px;
-$value-twenty-four: 24px;
-$font-size-article-highlight: 24px;
+$font-size-title: 26px;
+$font-size-subtitle: 22px;
+$value-twenty-four: 34px;
+$font-size-article-highlight: 22px;
 $font-size-highlight: 20px;
 $font-size-text: 18px;
 
-$font-size-title-adapted: 3vh;
-$font-size-subtitle-adapted: 2vh;
-$font-size-text-adapted: 1.5vh;
+$font-size-title-adapted: 34px;
+$font-size-super-subtitle-adapted: 30px;
+$font-size-subtitle-adapted: 28px;
+$font-size-text-adapted: 16px;
+$font-size-footer-text: 14px;
 
 // Responsive measures 
 $tablet-min-devices: 600px;
-$tablet-max-devices: 1024px;
-$desktop-min-devices: 1025px;
+$tablet-max-devices: 1124px;
+$desktop-min-devices: 1125px;
