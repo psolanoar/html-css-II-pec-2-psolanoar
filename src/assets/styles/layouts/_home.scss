@@ -41,7 +41,13 @@
   }
 
   .bg-orange {
-  background-color: $value-color-display-p3;
+    background-color: $value-color-display-p3;
+  }
+
+  @container (min-width: #{$tablet-max-devices}) {
+    .bg-orange:hover {
+      background-color: $value-color-button-hsl;
+    }
   }
 
   .badge {
@@ -49,7 +55,6 @@
     padding: $value-three-percentage $value-five-percentage $value-three-percentage $value-five-percentage;
   }
 }
-
 
 @layer grid {
   .body {
@@ -60,6 +65,7 @@
       .body__main--grid {
         display: $value-block;
         padding: $value-twenty-percentage;
+        container-type: $value-inline-size;
       }
 
       @supports ((display: $value-grid)) {
@@ -85,6 +91,17 @@
         padding: $value-five-percentage;
       }
     }
+  }
+}
+
+a.body__main--grid__item--link {
+  text-decoration: $value-none;
+  color: $value-color-tittle-hsl;
+}
+
+@container (min-width: #{$tablet-max-devices}) {
+  a.body__main--grid__item--link:hover {
+    color: $value-color-button-hsl;
   }
 }
 
@@ -135,6 +152,7 @@
         .body--flex__main__form {
           padding-top: $value-one-lvh;
           padding-bottom: $value-ten-lvh;
+          container-type: $value-inline-size;
 
           .body--flex__main__form--label {
             padding-bottom: $value-one-svh;
@@ -163,7 +181,6 @@
           }
           
           .body--flex__main__container__item {
-            flex: $value-one-flex;
             padding-bottom: $value-sixty-percentage;
             text-align: $value-center;
 
@@ -177,6 +194,19 @@
             .body--flex__main__container--title {
               font-size: $font-size-highlight;
               font-weight: $value-bold;
+            }
+            
+          }
+          
+          
+          @container (max-width: #{$tablet-min-devices}) {
+            .body--flex__main__container--title {
+              text-align: $value-justify;
+            }
+
+            .body--flex__main__container__item > p {
+              text-align: $value-justify;
+              padding: $value-one-dvw;
             }
           }
 
@@ -229,7 +259,13 @@ article:has(h1) {
     }
   
     .body--flex__main--text--highlight {
-      font-size: $font-size-super-subtitle-adapted;
+      font-size: $font-size-title;
+    }
+
+    @container (min-width: #{$tablet-min-devices}) {
+      .body--flex__main--text--highlight {
+        font-size: $font-size-super-subtitle-adapted;
+      }
     }
 
     .body--flex__main__container--title, .body--subtitle  {
@@ -245,8 +281,11 @@ article:has(h1) {
     .body--flex {
       .body--flex__main {
         padding: $value-two-percentage;
+        container-type: $value-inline-size;
+
         .body--flex__main__container {
           display: $value-flex;
+          container-type: $value-inline-size;
         }
       }
     }
